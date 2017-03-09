@@ -309,6 +309,8 @@ $$(ENUM_OPERATOR_OUT_GEN): $$(GENERATED_SRC_DIR)/%_operator_out.cc : $(LOCAL_PAT
   art_codegen_targets :=
 endef
 
+LOCAL_CFLAGS += -O3
+
 # We always build dex2oat and dependencies, even if the host build is otherwise disabled, since they are used to cross compile for the target.
 ifeq ($(ART_BUILD_HOST_NDEBUG),true)
   $(eval $(call build-libart-compiler,host,ndebug))
