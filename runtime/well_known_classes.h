@@ -46,14 +46,12 @@ struct WellKnownClasses {
   static jclass dalvik_system_DexPathList__Element;
   static jclass dalvik_system_PathClassLoader;
   static jclass dalvik_system_VMRuntime;
-  static jclass java_io_File;
   static jclass java_lang_annotation_Annotation__array;
   static jclass java_lang_BootClassLoader;
   static jclass java_lang_ClassLoader;
   static jclass java_lang_ClassNotFoundException;
   static jclass java_lang_Daemons;
   static jclass java_lang_Error;
-  static jclass java_lang_Exception;
   static jclass java_lang_ExceptionInInitializerError;
   static jclass java_lang_IllegalAccessError;
   static jclass java_lang_NoClassDefFoundError;
