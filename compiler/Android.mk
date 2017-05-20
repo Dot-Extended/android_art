@@ -289,6 +289,8 @@ $$(ENUM_OPERATOR_OUT_GEN): $$(GENERATED_SRC_DIR)/%_operator_out.cc : $(LOCAL_PAT
 
   LOCAL_NATIVE_COVERAGE := $(ART_COVERAGE)
 
+  LOCAL_CFLAGS += -O3
+
   ifeq ($$(art_target_or_host),target)
     # For atrace.
     LOCAL_SHARED_LIBRARIES += libcutils
@@ -308,8 +310,6 @@ $$(ENUM_OPERATOR_OUT_GEN): $$(GENERATED_SRC_DIR)/%_operator_out.cc : $(LOCAL_PAT
   art_static_or_shared :=
   art_codegen_targets :=
 endef
-
-LOCAL_CFLAGS += -O3
 
 # We always build dex2oat and dependencies, even if the host build is otherwise disabled, since they are used to cross compile for the target.
 ifeq ($(ART_BUILD_HOST_NDEBUG),true)
